@@ -1,8 +1,8 @@
 # Auto Price Calculator 
 
-This project is will help you 
-1) Estimate the gas price for your car
-2) Get Cost of ownership of the car
+This project is will help you.
+1) Estimate the gas price for your car.
+2) Get Cost of ownership of the car.
 3) Compare Cost of Ownership of different cars.
 
 
