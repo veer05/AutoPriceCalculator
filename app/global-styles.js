@@ -1,6 +1,8 @@
 import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyle = createGlobalStyle`
+// IF you are using Google Fonts or global css or minified css import here
+@import url('https://fonts.googleapis.com/css?family=Iceland');
   html,
   body {
     height: 100%;
