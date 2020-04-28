@@ -16,6 +16,7 @@ import FeaturePage from 'containers/FeaturePage/Loadable';
 import NotFoundPage from 'containers/NotFoundPage/Loadable';
 import Header from 'components/Header';
 import NavigationDrawer from 'components/NavigationDrawer';
+import HomePageTabs from 'components/HomePageTabs';
 // import Footer from 'components/Footer';
 import { BrowserView, MobileView } from 'react-device-detect';
 
@@ -40,6 +41,7 @@ export default function App() {
       </Helmet>
       <BrowserView>
         <Header />
+        <HomePageTabs />
       </BrowserView>
       <MobileView>
         <NavigationDrawer />
