@@ -57,7 +57,7 @@ function Header() {
 
   return (
     <div className={classes.root}>
-      <AppBar className={classes.header}>
+      <AppBar className={classes.header} position="sticky">
         <Toolbar>
           <img src={logo} alt="Logo" className={classes.logo} />
           <Typography variant="h4" className={classes.title}>
