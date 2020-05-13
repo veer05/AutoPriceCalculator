@@ -18,7 +18,6 @@ const useStyles = makeStyles(theme => ({
   root: {
     display: 'flex',
     flexFlow: 'column',
-    height: '100vh',
   },
   header: {
     backgroundColor: '#131212',
@@ -57,7 +56,7 @@ function Header() {
 
   return (
     <div className={classes.root}>
-      <AppBar className={classes.header} position="sticky">
+      <AppBar className={classes.header}>
         <Toolbar>
           <img src={logo} alt="Logo" className={classes.logo} />
           <Typography variant="h4" className={classes.title}>

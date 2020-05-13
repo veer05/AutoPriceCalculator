@@ -41,6 +41,7 @@ export default function App() {
       </Helmet>
       <BrowserView>
         <Header />
+        <HomePage />
         <HomePageTabs />
       </BrowserView>
       <MobileView>
