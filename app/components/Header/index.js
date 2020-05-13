@@ -18,7 +18,6 @@ const useStyles = makeStyles(theme => ({
   root: {
     display: 'flex',
     flexFlow: 'column',
-    height: '100vh',
   },
   header: {
     backgroundColor: '#131212',

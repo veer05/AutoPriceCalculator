@@ -15,7 +15,10 @@ import HomePage from 'containers/HomePage/Loadable';
 import FeaturePage from 'containers/FeaturePage/Loadable';
 import NotFoundPage from 'containers/NotFoundPage/Loadable';
 import Header from 'components/Header';
+import NavigationDrawer from 'components/NavigationDrawer';
+import HomePageTabs from 'components/HomePageTabs';
 // import Footer from 'components/Footer';
+import { BrowserView, MobileView } from 'react-device-detect';
 
 import GlobalStyle from '../../global-styles';
 
@@ -23,7 +26,7 @@ const AppWrapper = styled.div`
   margin: 0 auto;
   display: flex;
   min-height: 100%;
-  padding: 0 16px;
+  padding: 0;
   flex-direction: column;
 `;
 
@@ -36,7 +39,14 @@ export default function App() {
       >
         <meta name="description" content="A React.js Boilerplate application" />
       </Helmet>
-      <Header />
+      <BrowserView>
+        <Header />
+        <HomePage />
+        <HomePageTabs />
+      </BrowserView>
+      <MobileView>
+        <NavigationDrawer />
+      </MobileView>
       <Switch>
         <Route exact path="/" component={HomePage} />
         <Route path="/features" component={FeaturePage} />
