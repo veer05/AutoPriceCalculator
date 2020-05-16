@@ -38,6 +38,7 @@ const useStyles = makeStyles(theme => ({
     width: '50px',
     margin: '10px',
     marginLeft: '0px',
+    marginBottom: '15px',
   },
   Icon: {
     flexGrow: 1,
