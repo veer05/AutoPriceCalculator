@@ -9,12 +9,12 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import styled from 'styled-components';
-import { Switch, Route } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 
 import HomePage from 'containers/HomePage/Loadable';
 import FeaturePage from 'containers/FeaturePage/Loadable';
+import PageThree from 'containers/PageThree/Loadable';
 import NotFoundPage from 'containers/NotFoundPage/Loadable';
-import Header from 'components/Header';
 import NavigationDrawer from 'components/NavigationDrawer';
 import HomePageTabs from 'components/HomePageTabs';
 // import Footer from 'components/Footer';
@@ -40,8 +40,8 @@ export default function App() {
         <meta name="description" content="A React.js Boilerplate application" />
       </Helmet>
       <BrowserView>
-        <Header />
-        <HomePage />
+        {/* <Header /> */}
+        {/* <HomePage /> */}
         <HomePageTabs />
       </BrowserView>
       <MobileView>
@@ -50,6 +50,7 @@ export default function App() {
       <Switch>
         <Route exact path="/" component={HomePage} />
         <Route path="/features" component={FeaturePage} />
+        <Route path="/pageThree" component={PageThree} />
         <Route path="" component={NotFoundPage} />
       </Switch>
       {/* <Footer /> */}
