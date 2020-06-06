@@ -18,10 +18,12 @@ const useStyles = makeStyles(theme => ({
   root: {
     display: 'flex',
     flexFlow: 'column',
+    height: '50px',
   },
   header: {
     backgroundColor: '#131212',
     color: '#02bcfb',
+    height: '50px',
   },
   menuButton: {
     marginRight: theme.spacing(2),
@@ -29,12 +31,14 @@ const useStyles = makeStyles(theme => ({
   title: {
     fontFamily: 'Iceland',
     flexGrow: 1,
+    marginBottom: '10px',
   },
   logo: {
     backgroundimage: `url('./logo.png')`,
     width: '50px',
     margin: '10px',
     marginLeft: '0px',
+    marginBottom: '15px',
   },
   Icon: {
     flexGrow: 1,

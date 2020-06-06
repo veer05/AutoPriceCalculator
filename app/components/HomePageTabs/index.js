@@ -21,6 +21,7 @@ function HomePageTabs() {
 
   return (
     <Paper className={classes.root}>
+      {/* <BrowserView> */}
       <Tabs
         value={value}
         onChange={handleChange}

@@ -17,6 +17,7 @@ import PageThree from 'containers/PageThree/Loadable';
 import NotFoundPage from 'containers/NotFoundPage/Loadable';
 import NavigationDrawer from 'components/NavigationDrawer';
 import HomePageTabs from 'components/HomePageTabs';
+import Header from 'components/Header';
 // import Footer from 'components/Footer';
 import { BrowserView, MobileView } from 'react-device-detect';
 
@@ -40,8 +41,7 @@ export default function App() {
         <meta name="description" content="A React.js Boilerplate application" />
       </Helmet>
       <BrowserView>
-        {/* <Header /> */}
-        {/* <HomePage /> */}
+        <Header />
         <HomePageTabs />
       </BrowserView>
       <MobileView>
