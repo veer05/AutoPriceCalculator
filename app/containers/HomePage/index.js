@@ -26,11 +26,7 @@ import saga from './saga';
 
 const key = 'home';
 
-export function HomePage({
-  username,
-  onSubmitForm,
-  // onChangeUsername,
-}) {
+export function HomePage({ username, onSubmitForm }) {
   useInjectReducer({ key, reducer });
   useInjectSaga({ key, saga });
 
