@@ -29,11 +29,11 @@ function HomePageTabs() {
         textColor="primary"
         centered
       >
-        <Tab component={Link} label="Item One" to="/" />
+        <Tab component={Link} label="Home Page" to="/" />
 
-        <Tab component={Link} label="Item Two" to="/features" />
+        <Tab component={Link} label="Cost Of Ownership" to="/costOfOwnership" />
 
-        <Tab component={Link} label="Item Three" to="/pageThree" />
+        <Tab component={Link} label="Gas Price Check" to="/gasPriceCheck" />
       </Tabs>
     </Paper>
   );

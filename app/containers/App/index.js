@@ -12,8 +12,8 @@ import styled from 'styled-components';
 import { Route, Switch } from 'react-router-dom';
 
 import HomePage from 'containers/HomePage/Loadable';
-import FeaturePage from 'containers/FeaturePage/Loadable';
-import PageThree from 'containers/PageThree/Loadable';
+import CostOfOwnership from 'containers/CostOfOwnership/Loadable';
+import GasPriceCheck from 'containers/GasPriceCheck/Loadable';
 import NotFoundPage from 'containers/NotFoundPage/Loadable';
 import NavigationDrawer from 'components/NavigationDrawer';
 import HomePageTabs from 'components/HomePageTabs';
@@ -49,8 +49,8 @@ export default function App() {
       </MobileView>
       <Switch>
         <Route exact path="/" component={HomePage} />
-        <Route path="/features" component={FeaturePage} />
-        <Route path="/pageThree" component={PageThree} />
+        <Route path="/costOfOwnership" component={CostOfOwnership} />
+        <Route path="/gasPriceCheck" component={GasPriceCheck} />
         <Route path="" component={NotFoundPage} />
       </Switch>
       {/* <Footer /> */}
