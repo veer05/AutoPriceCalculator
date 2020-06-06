@@ -9,14 +9,15 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import styled from 'styled-components';
-import { Switch, Route } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 
 import HomePage from 'containers/HomePage/Loadable';
-import FeaturePage from 'containers/FeaturePage/Loadable';
+import CostOfOwnership from 'containers/CostOfOwnership/Loadable';
+import GasPriceCheck from 'containers/GasPriceCheck/Loadable';
 import NotFoundPage from 'containers/NotFoundPage/Loadable';
-import Header from 'components/Header';
 import NavigationDrawer from 'components/NavigationDrawer';
 import HomePageTabs from 'components/HomePageTabs';
+import Header from 'components/Header';
 // import Footer from 'components/Footer';
 import { BrowserView, MobileView } from 'react-device-detect';
 
@@ -48,7 +49,8 @@ export default function App() {
       </MobileView>
       <Switch>
         <Route exact path="/" component={HomePage} />
-        <Route path="/features" component={FeaturePage} />
+        <Route path="/costOfOwnership" component={CostOfOwnership} />
+        <Route path="/gasPriceCheck" component={GasPriceCheck} />
         <Route path="" component={NotFoundPage} />
       </Switch>
       {/* <Footer /> */}
