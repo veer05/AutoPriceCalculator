@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-vars,react/no-unused-prop-types */
 /*
  * HomePage
  *
@@ -29,9 +28,6 @@ const key = 'home';
 
 export function HomePage({
   username,
-  loading,
-  error,
-  repos,
   onSubmitForm,
   // onChangeUsername,
 }) {
@@ -43,12 +39,6 @@ export function HomePage({
     if (username && username.trim().length > 0) onSubmitForm();
   }, []);
 
-  const reposListProps = {
-    loading,
-    error,
-    repos,
-  };
-
   return (
     <article>
       <Helmet>
@@ -59,35 +49,6 @@ export function HomePage({
         />
       </Helmet>
       <div>
-        {/* <CenteredSection> */}
-        {/* <H2> */}
-        {/* <FormattedMessage {...messages.startProjectHeader} /> */}
-        {/* </H2> */}
-        {/* <p> */}
-        {/* <FormattedMessage {...messages.startProjectMessage} /> */}
-        {/* </p> */}
-        {/* </CenteredSection> */}
-        {/* <Section> */}
-        {/* <H2> */}
-        {/* <FormattedMessage {...messages.trymeHeader} /> */}
-        {/* </H2> */}
-        {/* <Form onSubmit={onSubmitForm}> */}
-        {/* <label htmlFor="username"> */}
-        {/* <FormattedMessage {...messages.trymeMessage} /> */}
-        {/* <AtPrefix> */}
-        {/* <FormattedMessage {...messages.trymeAtPrefix} /> */}
-        {/* </AtPrefix> */}
-        {/* <Input */}
-        {/* id="username" */}
-        {/* type="text" */}
-        {/* placeholder="mxstbr" */}
-        {/* value={username} */}
-        {/* onChange={onChangeUsername} */}
-        {/* /> */}
-        {/* </label> */}
-        {/* </Form> */}
-        {/* <ReposList {...reposListProps} /> */}
-        {/* </Section> */}
         <h1> hello this is home </h1>
       </div>
     </article>
@@ -95,12 +56,8 @@ export function HomePage({
 }
 
 HomePage.propTypes = {
-  loading: PropTypes.bool,
-  error: PropTypes.oneOfType([PropTypes.object, PropTypes.bool]),
-  repos: PropTypes.oneOfType([PropTypes.array, PropTypes.bool]),
   onSubmitForm: PropTypes.func,
   username: PropTypes.string,
-  onChangeUsername: PropTypes.func,
 };
 
 const mapStateToProps = createStructuredSelector({
