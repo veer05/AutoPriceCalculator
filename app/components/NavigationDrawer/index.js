@@ -14,12 +14,11 @@ import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
-import ListItemText from '@material-ui/core/ListItemText';
 import HomeIcon from '@material-ui/icons/Home';
 import AccountBalanceIcon from '@material-ui/icons/AccountBalance';
 import LocalGasStationIcon from '@material-ui/icons/LocalGasStation';
+import { Link } from 'react-router-dom';
 import logo from '../../images/logo.png';
-
 const drawerWidth = 240;
 
 const useStyles = makeStyles(theme => ({
@@ -101,6 +100,11 @@ function NavigationDrawer() {
   const classes = useStyles();
   const theme = useTheme();
   const [open, setOpen] = React.useState(false);
+  const arrOfPage = [
+    { text: 'Home', url: '/' },
+    { text: 'Gas Price Check', url: '/gasPriceCheck' },
+    { text: 'Cost of Ownership', url: '/costOfOwnership' },
+  ];
 
   const handleDrawerOpen = () => {
     setOpen(true);
@@ -162,18 +166,18 @@ function NavigationDrawer() {
         </div>
         <Divider />
         <List>
-          {['Home', 'Gas Price Check', 'Cost of Ownership'].map(
-            (text, index) => (
-              <ListItem button key={text}>
-                <ListItemIcon>
-                  {index === 0 && <HomeIcon color="disabled" />}
-                  {index === 1 && <LocalGasStationIcon color="disabled" />}
-                  {index === 2 && <AccountBalanceIcon color="disabled" />}
-                </ListItemIcon>
-                <ListItemText primary={text} />
-              </ListItem>
-            ),
-          )}
+          {arrOfPage.map((obj, index) => (
+            <ListItem button key={obj.text}>
+              <ListItemIcon>
+                {index === 0 && <HomeIcon color="disabled" />}
+                {index === 1 && <LocalGasStationIcon color="disabled" />}
+                {index === 2 && <AccountBalanceIcon color="disabled" />}
+              </ListItemIcon>
+              <Link to={obj.url} onClick={handleDrawerClose}>
+                {obj.text}
+              </Link>
+            </ListItem>
+          ))}
         </List>
         <Divider />
       </Drawer>
